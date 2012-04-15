@@ -22,9 +22,9 @@ This plugin will automatically resize your WordPress auto-embeds, including vide
 * WordPress.tv
 * Scribd
 
-= [See a Live Example](http://www.kevinleary.net/responsive-video-embeds-plugin-example/) =
+= Live Example =
 
-This links to a test page where you can resize the browser and watch the videos automatically scale to fit the resolution.
+[Visit the test page](http://www.kevinleary.net/responsive-video-embeds-plugin-example/) where you can resize the browser and watch the videos automatically scale to fit the resolution.
 
 = About WordPress Auto-embeds =
 
