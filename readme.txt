@@ -22,15 +22,15 @@ This plugin will automatically resize your WordPress auto-embeds, including vide
 * WordPress.tv
 * Scribd
 
-## [See a Live Example](http://www.kevinleary.net/responsive-video-embeds-plugin-example/)
+= [See a Live Example](http://www.kevinleary.net/responsive-video-embeds-plugin-example/) =
 
 This links to a test page where you can resize the browser and watch the videos automatically scale to fit the resolution.
 
-## About WordPress Auto-embeds
+= About WordPress Auto-embeds =
 
 WordPress has a nifty auto-embed feature, allowing authors to automatically turn a link to a video embed into a video player when a post is viewed. To turn this feature on check the **Auto-embeds** check box in **Administration > Settings > Media SubPanel**.
 
-## Under the hood
+= Under the hood =
 
 Please note that this plugins modifies the output of `modify_embed_output` filter, adding HTML & CSS to make the magic happen.
 
