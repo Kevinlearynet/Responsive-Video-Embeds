@@ -44,6 +44,8 @@ The *Responsive Video Embeds* plugin is compatibly with WordPress Multisite, jus
 
 1. Install easily with the WordPress plugin control panel or manually download the plugin and upload the folder `responsive-video-embeds` to the `/wp-content/plugins/` directory 
 2. Activate the plugin through the 'Plugins' menu in WordPress
+3. In the WordPress admin, enable the **Auto-embeds** feature under the **Settings > Media** menu.
+4. Embed your videos using the [auto embed feature](http://codex.wordpress.org/Embeds) provided by WordPress.
 
 == Screenshots ==
 
