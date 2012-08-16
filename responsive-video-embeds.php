@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: Responsive Video Embeds
-Version: 1.0
+Version: 1.1
 Plugin URI: http://www.kevinleary.net/
-Description: This plugin will automatically resize embed video and other iframes in a responsive fashion.
+Description: This plugin will automatically resize video embeds, objects and other iframes in a responsive fashion.
 Author: Kevin Leary
 Author URI: http://www.kevinleary.net
 License: GPL2
@@ -46,6 +46,17 @@ class KplResponsiveVideoEmbeds {
 	}
 	
 	/**
+	 * Embed CSS
+	 *
+	 * CSS needed to automatically resize embedded videos. This method was originally 
+	 * invented by Anders M. Andersen at http://amobil.se/2011/11/responsive-embeds/
+	 */
+	function load_styles() {
+		// Respects SSL, style.css is relative to the current file
+		wp_enqueue_style( 'responsive-video-embeds', plugins_url('css/responsive-video-embeds.css', __FILE__), array(), '1.0' );
+	}
+	
+	/**
 	 * Add Embed Container
 	 *
 	 * Wrap the video embed in a container for scaling
@@ -76,32 +87,21 @@ class KplResponsiveVideoEmbeds {
 			}
 		}
 		
-		// Not an accepted provider
-		if ( !$resize )
-			return $html;
-		
-		// Pattern for removing width and height attributes
+		// Remove width and height attributes
 		$attr_pattern = '/(width|height)="[0-9]*"/i';
 		$whitespace_pattern = '/\s+/';
 		$embed = preg_replace($attr_pattern, "", $html);
 		$embed = preg_replace($whitespace_pattern, ' ', $embed); // Clean-up whitespace
 		$embed = trim($embed);
+		$inline_styles = ( isset( $attr['width'] ) ) ? ' style="max-width:' . absint( $attr['width'] ) . 'px;"' : '';
 
 		// Add container around the video, use a <p> to avoid conflicts with wpautop()
-		$html = "<p class=\"rve-embed-container\">$embed</p>\n";
+		$html = '<div class="rve-embed-container"' . $inline_styles . '>';
+		$html .= '<div class="rve-embed-container-inner">';
+		$html .= $embed;
+		$html .= "</div></div>";
 		
 		return $html;
-	}
-
-	/**
-	 * Embed CSS
-	 *
-	 * CSS needed to automatically resize embedded videos. This method was originally 
-	 * invented by Anders M. Andersen at http://amobil.se/2011/11/responsive-embeds/
-	 */
-	function load_styles() {
-		// Respects SSL, style.css is relative to the current file
-		wp_enqueue_style( 'responsive-video-embeds', plugins_url('css/responsive-video-embeds.css', __FILE__), array(), '1.0' );
 	}
 }
 

@@ -53,5 +53,8 @@ The *Responsive Video Embeds* plugin is compatibly with WordPress Multisite, jus
 
 == Changelog ==
 
+= 1.1 =
+* Modifications to responsive container sizes to allow for a max-width setup using the WordPress [embed] shortcode.
+
 = 1.0 =
 * Initial public release to the WordPress plugin repository
