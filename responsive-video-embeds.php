@@ -33,7 +33,7 @@ class KplResponsiveVideoEmbeds {
 	
 	// Constants & variables
 	static $do_enqueue;
-	static $v = '1.0';
+	static $v = '1.2';
 	
 	/**
 	 * Setup the object

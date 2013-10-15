@@ -3,7 +3,7 @@ Contributors: kevinlearynet
 Tags: responsive, video, embeds, embed, object, iframe, youtube, vimeo, viddler, dailymotion, bliptvmobile, html5 video, oembed, embed discovery, auto-embed, automatic, auto, scribd, wordpress.tv, hulu, revision3, resize
 Requires at least: 3.0
 Tested up to: 3.3.1
-Stable tag: 1.1
+Stable tag: trunk
 
 Automatic responsive resizing for WordPress embeds, including video and other iframes.
 
