@@ -5,11 +5,11 @@ Requires at least: 3.0
 Tested up to: 3.3.1
 Stable tag: 1.1
 
-Automatically resize WordPress auto-embeds, including video and other iframes, in a responsive fashion. 
+Automatic responsive resizing for WordPress embeds, including video and other iframes.
 
 == Description ==
 
-This plugin will automatically resize your WordPress auto-embeds, including video and other iframes, in a responsive fashion. It currently supports the following providers:
+When activated, this plugin will automatically resize WordPress auto-embeds. This includes video along with other `iframe` based embeds. Currently this supports the following providers:
 
 * YouTube
 * Vimeo
@@ -24,21 +24,21 @@ This plugin will automatically resize your WordPress auto-embeds, including vide
 
 = Live Example =
 
-[Visit the test page](http://www.kevinleary.net/responsive-video-embeds-plugin-example/) where you can resize the browser and watch the videos automatically scale to fit the resolution.
+[Visit the test page](http://www.kevinleary.net/responsive-video-embeds-plugin-example/) to see it in action, where you can resize the browser and watch the videos automatically scale to fit the resolution.
 
 = About WordPress Auto-embeds =
 
-WordPress has a nifty auto-embed feature, allowing authors to automatically turn a link to a video embed into a video player when a post is viewed. To turn this feature on check the **Auto-embeds** check box in **Administration > Settings > Media SubPanel**.
+WordPress has a nifty auto-embed feature, allowing authors to automatically turn a link to a video embed into a video player when a post is viewed. 
+
+**If you're using WordPress 3.5 or below, you'll need to enable the auto-embed feature by checking the *Auto-embeds* check box in *Administration > Settings > Media SubPanel*.**
 
 = Under the hood =
 
-Please note that this plugins modifies the output of `modify_embed_output` filter, adding HTML & CSS to make the magic happen.
-
-Credit for the method used in this plugin goes to [Anders M. Andersen](http://amobil.se/2011/11/responsive-embeds/) for crafting the method used to gracefully resize the embeds.
+Please note that this plugins modifies the output of `embed_oembed_html` filter, adding HTML, CSS and small amount of JS to make the magic happen when videos are found on a post or page.
 
 = Multisite Compatibility =
 
-The *Responsive Video Embeds* plugin is compatibly with WordPress Multisite, just use the [Network Activate](http://codex.wordpress.org/Create_A_Network#WordPress_Plugins) feature to enable responsive video resizing embed on every site. If you only want responsive video resizing to happen on a specific site, activate the plugin for that site only.
+The *Responsive Video Embeds* plugin is compatible with WordPress Multisite, just use the [Network Activate](http://codex.wordpress.org/Create_A_Network#WordPress_Plugins) feature to enable responsive video resizing embed on every site. If you only want responsive video resizing to happen on a specific site, activate the plugin for that site only.
 
 == Installation ==
 
@@ -54,14 +54,15 @@ The *Responsive Video Embeds* plugin is compatibly with WordPress Multisite, jus
 == Changelog ==
 
 = 1.2 =
-* Fix Vimeo embeds, removing black bars from the left, right, top or bottom
-* Allow the sizing to adjust based on the source video's aspect ratio
+* Fix improperly sized embeds that show black bars on the left, right, top or bottom
+* Adjustments and bug squashes for Vimeo embeds
+* Adjust the initial sizing using the source video's original aspect ratio
 * Add a very small amount of JS to calculate proper aspect ratio
-* Load CSS & JS conditionally, only when a supported embed is on a page/post
-* Simplify HTML, removing an unnecessary `div`
+* Load CSS & JS conditionally, only when a supported embed is on a page/post for better performance
+* Simplify HTML, removing an unnecessary `div` element
 
 = 1.1 =
-* Modifications to responsive container sizes to allow for a max-width setup using the WordPress [embed] shortcode.
+* Modifications to responsive container sizes to allow for a max-width setup using the WordPress `[embed]` shortcode.
 
 = 1.0 =
 * Initial public release to the WordPress plugin repository
