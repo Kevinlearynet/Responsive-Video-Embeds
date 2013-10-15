@@ -1,0 +1,26 @@
+/**
+ * Responsive Video Embed CSS
+ *
+ * CSS needed to automatically resize embedded videos. This method was originally 
+ * invented by Anders M. Andersen at http://amobil.se/2011/11/responsive-embeds/
+ * LESS CSS processed locally with OS X Less App and output as minified CSS.
+ */
+
+.rve {
+
+	// Dynamic responsive container
+	position: relative;
+	height: 0;
+	overflow: hidden;
+	max-width: 100%; 
+	height: auto; 
+	
+	// Embed elements
+	iframe, object, embed {
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+	}
+}
