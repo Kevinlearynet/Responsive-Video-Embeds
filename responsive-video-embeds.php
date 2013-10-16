@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Responsive Video Embeds
-Version: 1.2
+Version: 1.2.1
 Plugin URI: http://www.kevinleary.net/
 Description: This plugin will automatically resize video embeds, objects and other iframes in a responsive fashion.
 Author: Kevin Leary
