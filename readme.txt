@@ -2,7 +2,7 @@
 Contributors: kevinlearynet
 Tags: responsive, video, embeds, embed, object, iframe, youtube, vimeo, viddler, dailymotion, bliptvmobile, html5 video, oembed, embed discovery, auto-embed, automatic, auto, scribd, wordpress.tv, hulu, revision3, resize
 Requires at least: 3.0
-Tested up to: 3.3.1
+Tested up to: 3.6.1
 Stable tag: trunk
 
 Automatic responsive resizing for WordPress embeds, including video and other iframes.
@@ -52,6 +52,9 @@ The *Responsive Video Embeds* plugin is compatible with WordPress Multisite, jus
 1. Automatically resized videos, the magic happens when you resize the window
 
 == Changelog ==
+
+= 1.2.1 =
+* Fix reported issues with YouTube iframe embeds without `width` and `height` attributes
 
 = 1.2 =
 * Fix improperly sized embeds that show black bars on the left, right, top or bottom
